@@ -1,8 +1,12 @@
 package com.example.bitirmeprojesi.data.entity
 
+import java.io.Serializable
+
 data class Yemekler(
-    val yemek_adi: String,
-    val yemek_fiyat: String,
-    val yemek_id: String,
-    val yemek_resim_adi: String
-)
+    var yemek_adi: String,
+    var yemek_fiyat: String,
+    var yemek_id: String,
+    var yemek_resim_adi: String
+) : Serializable {
+
+}

@@ -33,3 +33,13 @@ w
 Gapp/src/main/java/com/example/bitirmeprojesi/retrofit/RetrofitClient.kt,7\c\7c3663238b3c69b4955d023fc46d28e7b223d039
 m
 =app/src/main/java/com/example/bitirmeprojesi/di/AppModeule.kt,6\7\677e97f37e1f26e6c7e95a2552786c7a14a9f2de
+|
+Lapp/src/main/java/com/example/bitirmeprojesi/ui/viewmodel/DetailViewModel.kt,d\4\d4ffdfa58db4fc6f8a064a33e46e71a725cd7709
+Å
+Q.idea/sonarlint/securityhotspotstore/d/4/d4ffdfa58db4fc6f8a064a33e46e71a725cd7709,2\d\2d59447d95d1a7fb1edbd76fbe02459992b16949
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+w
+G.idea/sonarlint/issuestore/d/4/d4ffdfa58db4fc6f8a064a33e46e71a725cd7709,9\a\9aa30d588350266bf63aad4be758eb99a506ae74
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0

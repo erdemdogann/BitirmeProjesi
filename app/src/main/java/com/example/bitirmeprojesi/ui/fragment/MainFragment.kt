@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bitirmeprojesi.R
 import com.example.bitirmeprojesi.databinding.FragmentMainBinding
@@ -17,6 +18,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding
     private lateinit var viewModel: MainViewModel
+    private var adapter: MainCardAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,11 +26,17 @@ class MainFragment : Fragment() {
     ): View? {
         binding = FragmentMainBinding.inflate(inflater, container, false)
 
-        viewModel.foodList.observe(viewLifecycleOwner) {
-            val mainAdapter = MainCardAdapter(it)
-            binding.foodList.adapter = mainAdapter
+        adapter = MainCardAdapter()
+        binding.foodList.adapter = adapter
+        adapter?.onClick = {
+            findNavController().navigate(MainFragmentDirections.foodDetail(foods = it))
         }
-        binding.foodList.layoutManager =LinearLayoutManager(requireContext())
+
+        viewModel.foodList.observe(viewLifecycleOwner) {
+          adapter?.allFood = it
+        }
+
+        binding.foodList.layoutManager = LinearLayoutManager(requireContext())
         return binding.root
     }
 
