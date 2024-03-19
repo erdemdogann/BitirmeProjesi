@@ -33,6 +33,15 @@ class DetailFragment : Fragment() {
         binding.add.setOnClickListener { add() }
         binding.decrease.setOnClickListener { decrease() }
 
+        binding.order.setOnClickListener {
+                val food_name = binding.foodName1.text.toString()
+                val food_image = getFood.yemek_resim_adi
+                val food_price = getFood.yemek_fiyat.toInt()
+                val food_order = number
+                val user_name = "erdem"
+            viewModel.order(food_name, food_image, food_price, food_order, user_name)
+        }
+
         return binding.root
     }
 

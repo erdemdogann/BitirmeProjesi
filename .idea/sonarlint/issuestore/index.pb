@@ -59,3 +59,9 @@ Q.idea/sonarlint/securityhotspotstore/9/f/9fe84ebb15faf917b7def6236dba604453cc61
 Q.idea/sonarlint/securityhotspotstore/2/d/2d59447d95d1a7fb1edbd76fbe02459992b16949,7\b\7b2ea35a5e5dcbe2500d473d86f3f4c0a712706d
 Å
 Q.idea/sonarlint/securityhotspotstore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e,9\0\909762385fc6eb20f922a91c6865741308b57f2c
+v
+Fapp/src/main/java/com/example/bitirmeprojesi/data/entity/CRUDAnswer.kt,3\c\3cbf5250726034f01575f5bbc86ec0f650ae1cb5
+Å
+Q.idea/sonarlint/securityhotspotstore/3/c/3cbf5250726034f01575f5bbc86ec0f650ae1cb5,b\5\b54ed1808fe0a557913dbec61370ed5c8cd87884
+w
+G.idea/sonarlint/issuestore/3/c/3cbf5250726034f01575f5bbc86ec0f650ae1cb5,f\8\f8baa7c4a4e5b1fb23254640482ddfbd2277c874
