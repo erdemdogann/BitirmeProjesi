@@ -15,6 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class DetailFragment : Fragment() {
     private lateinit var binding: FragmentDetailBinding
     private lateinit var viewModel: DetailViewModel
+    var number = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,9 +30,22 @@ class DetailFragment : Fragment() {
         binding.foodName1.text = getFood.yemek_adi
         binding.foodPrice2.text = getFood.yemek_fiyat
 
-
-
+        binding.add.setOnClickListener { add() }
+        binding.decrease.setOnClickListener { decrease() }
 
         return binding.root
+    }
+
+    fun add() {
+        number += 1
+        binding.foodNumber.text = number.toString()
+    }
+
+    fun decrease() {
+        if (number > 0){
+            number -= 1
+            binding.foodNumber.text = number.toString()
+        }
+
     }
 }
