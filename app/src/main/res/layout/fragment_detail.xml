@@ -8,9 +8,9 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="127dp"
+        android:layout_marginTop="80dp"
         android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toTopOf="@+id/foodName1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,6 +67,8 @@
         android:layout_height="wrap_content"
         android:text="-"
         android:textSize="24sp"
+        android:backgroundTint="@color/bottom"
+        android:textColor="@color/buttomText"
         app:layout_constraintBottom_toBottomOf="@+id/foodNumber"
         app:layout_constraintEnd_toStartOf="@+id/foodNumber"
         app:layout_constraintHorizontal_bias="0.5"
@@ -79,6 +81,8 @@
         android:layout_height="wrap_content"
         android:text="+"
         android:textSize="24sp"
+        android:backgroundTint="@color/bottom"
+        android:textColor="@color/buttomText"
         app:layout_constraintBottom_toBottomOf="@+id/foodNumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -92,9 +96,21 @@
         android:layout_marginBottom="35dp"
         android:text="Send Basket"
         android:textSize="24sp"
+        android:textColor="@color/buttomText"
+        android:backgroundTint="@color/bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,6 +33,9 @@ class DetailFragment : Fragment() {
 
         binding.add.setOnClickListener { add() }
         binding.decrease.setOnClickListener { decrease() }
+        binding.back.setOnClickListener {
+
+        }
 
         binding.sendBasket.setOnClickListener {
                 val food_name = binding.foodName1.text.toString()

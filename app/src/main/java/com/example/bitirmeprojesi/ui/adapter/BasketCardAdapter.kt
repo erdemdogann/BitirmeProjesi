@@ -8,10 +8,10 @@ import com.example.bitirmeprojesi.data.entity.Yemekler
 import com.example.bitirmeprojesi.databinding.BasketCardBinding
 import com.example.bitirmeprojesi.ui.viewmodel.BasketViewModel
 
-class BasketCardAdapter(var viewModel: BasketViewModel) :
+class BasketCardAdapter :
     RecyclerView.Adapter<BasketCardAdapter.Holder>() {
 
-    var onClick: (Yemekler) -> Unit = { }
+    var onClick: (Int,String) -> Unit = {id,userName->}
     var basketFood: MutableList<Order> = mutableListOf()
         set(value) {
             field = value
@@ -28,17 +28,8 @@ class BasketCardAdapter(var viewModel: BasketViewModel) :
                 orderFoodPrice.text = orders.yemek_fiyat
                 val price = orders.yemek_fiyat.toInt() * orders.yemek_siparis_adet.toInt()
                 textView4.text = "Total: $price"
-                button.setOnClickListener {
-                    viewModel.delete(
-                        orders.kullanici_adi,
-                        orders.sepet_yemek_id.toInt(),
-                        callBack = {
-                            var deletedItem = basketFood.indexOfFirst {
-                                it.sepet_yemek_id == orders.sepet_yemek_id
-                            }
-                            basketFood.removeAt(deletedItem)
-                            notifyItemRemoved(deletedItem)
-                        })
+                delete.setOnClickListener {
+                    onClick.invoke(orders.sepet_yemek_id.toInt(),orders.kullanici_adi)
                 }
             }
         }

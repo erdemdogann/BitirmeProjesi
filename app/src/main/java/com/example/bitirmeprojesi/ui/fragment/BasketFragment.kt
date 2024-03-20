@@ -26,14 +26,27 @@ class BasketFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentBasketBinding.inflate(inflater, container, false)
 
-        adapter = BasketCardAdapter(viewModel)
+        adapter = BasketCardAdapter()
         binding.basketList.adapter = adapter
         binding.basketList.layoutManager = LinearLayoutManager(requireContext())
 
         viewModel.foodList.observe(viewLifecycleOwner) {
             adapter?.basketFood = it.toMutableList()
         }
-
+        adapter?.onClick = {id,userName->
+            viewModel.delete(
+                userName,
+                id,
+                callBack = {
+                    var deletedItem = adapter?.basketFood?.indexOfFirst {
+                        it.sepet_yemek_id.toInt() == id
+                    }
+                    if (deletedItem!=null) {
+                        adapter?.basketFood?.removeAt(deletedItem)
+                        adapter?.notifyItemRemoved(deletedItem)
+                    }
+                })
+        }
         return binding.root
     }
 
