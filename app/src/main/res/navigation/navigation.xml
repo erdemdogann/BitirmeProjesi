@@ -25,6 +25,9 @@
         <argument
             android:name="foods"
             app:argType="com.example.bitirmeprojesi.data.entity.Yemekler" />
+        <action
+            android:id="@+id/backToMain"
+            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/basketFragment"

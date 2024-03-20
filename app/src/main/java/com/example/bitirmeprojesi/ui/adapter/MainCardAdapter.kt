@@ -20,13 +20,18 @@ class MainCardAdapter :
 
     inner class Holder(val itemBinding: CardMainBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
+        fun bind(allFood: Yemekler) {
+            itemBinding.foodName.text = allFood.yemek_adi
+            itemBinding.foodPrice.text = allFood.yemek_fiyat
+
+            itemBinding.imageView.loadImage(allFood.yemek_resim_adi)
+        }
         init {
             itemBinding.root.setOnClickListener {
                 onClick(allFood[this.bindingAdapterPosition])
             }
         }
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val binding = CardMainBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -38,11 +43,6 @@ class MainCardAdapter :
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        val food = allFood.get(position)
-
-        holder.itemBinding.foodName.text = food.yemek_adi
-        holder.itemBinding.foodPrice.text = food.yemek_fiyat
-
-        holder.itemBinding.imageView.loadImage(food.yemek_resim_adi)
+        holder.bind(allFood[position])
     }
 }

@@ -65,17 +65,19 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="TextView"
                 android:textSize="24sp"
-                tools:layout_editor_absoluteX="288dp"
-                tools:layout_editor_absoluteY="88dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
             <ImageView
                 android:id="@+id/delete"
-                android:layout_width="36dp"
-                android:layout_height="30dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="30dp"
+                android:layout_width="48dp"
+                android:layout_height="43dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="10dp"
                 app:layout_constraintBottom_toTopOf="@+id/textView4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:srcCompat="@drawable/delete" />

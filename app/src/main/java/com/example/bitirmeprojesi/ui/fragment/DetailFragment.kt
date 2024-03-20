@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.bitirmeprojesi.R
+import com.example.bitirmeprojesi.data.loadImage
 import com.example.bitirmeprojesi.databinding.FragmentDetailBinding
 import com.example.bitirmeprojesi.ui.viewmodel.DetailViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -28,23 +30,27 @@ class DetailFragment : Fragment() {
         val bundle: DetailFragmentArgs by navArgs()
         val getFood = bundle.foods
 
-        binding.foodName1.text = getFood.yemek_adi
-        binding.foodPrice2.text = getFood.yemek_fiyat
+        binding.apply {
+            foodName1.text = getFood.yemek_adi
+            foodPrice2.text = getFood.yemek_fiyat
 
-        binding.add.setOnClickListener { add() }
-        binding.decrease.setOnClickListener { decrease() }
-        binding.back.setOnClickListener {
+            add.setOnClickListener { add() }
+            decrease.setOnClickListener { decrease() }
+            back.setOnClickListener {
+                findNavController().navigate(DetailFragmentDirections.backToMain())
+            }
+            imageView2.loadImage(getFood.yemek_resim_adi)
 
-        }
-
-        binding.sendBasket.setOnClickListener {
+            sendBasket.setOnClickListener {
                 val food_name = binding.foodName1.text.toString()
                 val food_image = getFood.yemek_resim_adi
                 val food_price = getFood.yemek_fiyat.toInt()
                 val food_order = number
                 val user_name = "erdem"
-            viewModel.order(food_name, food_image, food_price, food_order, user_name)
+                viewModel.order(food_name, food_image, food_price, food_order, user_name)
+            }
         }
+
 
         return binding.root
     }
@@ -55,15 +61,16 @@ class DetailFragment : Fragment() {
     }
 
     fun decrease() {
-        if (number > 0){
+        if (number > 0) {
             number -= 1
             binding.foodNumber.text = number.toString()
         }
 
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val tempViewModel:DetailViewModel by viewModels()
+        val tempViewModel: DetailViewModel by viewModels()
         viewModel = tempViewModel
     }
 }
