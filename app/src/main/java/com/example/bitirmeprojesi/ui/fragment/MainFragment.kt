@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bitirmeprojesi.databinding.FragmentMainBinding
 import com.example.bitirmeprojesi.ui.adapter.MainCardAdapter
@@ -38,7 +39,7 @@ class MainFragment : Fragment() {
             findNavController().navigate(MainFragmentDirections.foodBasket())
         }
 
-        binding.foodList.layoutManager = LinearLayoutManager(requireContext())
+        binding.foodList.layoutManager = GridLayoutManager(requireContext(),2)
         return binding.root
     }
 

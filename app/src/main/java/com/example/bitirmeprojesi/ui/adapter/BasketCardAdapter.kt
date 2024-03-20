@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bitirmeprojesi.data.entity.Order
 import com.example.bitirmeprojesi.data.entity.Yemekler
+import com.example.bitirmeprojesi.data.loadImage
 import com.example.bitirmeprojesi.databinding.BasketCardBinding
 import com.example.bitirmeprojesi.ui.viewmodel.BasketViewModel
 
@@ -31,6 +32,7 @@ class BasketCardAdapter :
                 delete.setOnClickListener {
                     onClick.invoke(orders.sepet_yemek_id.toInt(),orders.kullanici_adi)
                 }
+                foodImage.loadImage(orders.yemek_resim_adi)
             }
         }
     }

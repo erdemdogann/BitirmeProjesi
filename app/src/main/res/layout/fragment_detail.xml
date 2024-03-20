@@ -9,8 +9,8 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_height="225dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toTopOf="@+id/foodName1"
         app:layout_constraintEnd_toEndOf="parent"
