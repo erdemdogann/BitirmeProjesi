@@ -2,19 +2,18 @@ package com.example.bitirmeprojesi.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.bitirmeprojesi.data.entity.Yemekler
+import com.example.bitirmeprojesi.data.loadImage
 import com.example.bitirmeprojesi.databinding.CardMainBinding
-import com.example.bitirmeprojesi.databinding.FragmentMainBinding
-import com.example.bitirmeprojesi.ui.fragment.MainFragmentDirections
-import com.example.bitirmeprojesi.ui.viewmodel.MainViewModel
+import com.example.bitirmeprojesi.ui.fragment.MainFragment
 
-class MainCardAdapter() :
+class MainCardAdapter :
     RecyclerView.Adapter<MainCardAdapter.Holder>() {
     var onClick: (Yemekler) -> Unit = { }
     var allFood: List<Yemekler> = listOf()
-        set (value) {
+        set(value) {
             field = value
             notifyDataSetChanged()
         }
@@ -44,6 +43,6 @@ class MainCardAdapter() :
         holder.itemBinding.foodName.text = food.yemek_adi
         holder.itemBinding.foodPrice.text = food.yemek_fiyat
 
-
+        holder.itemBinding.imageView.loadImage(food.yemek_resim_adi)
     }
 }

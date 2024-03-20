@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.bitirmeprojesi.R
 import com.example.bitirmeprojesi.databinding.FragmentMainBinding
 import com.example.bitirmeprojesi.ui.adapter.MainCardAdapter
 import com.example.bitirmeprojesi.ui.viewmodel.MainViewModel

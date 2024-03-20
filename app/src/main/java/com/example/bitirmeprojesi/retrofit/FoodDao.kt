@@ -32,7 +32,7 @@ interface FoodDao {
     @FormUrlEncoded
     suspend fun delete(
         @Field("kullanici_adi") user_name: String,
-        @Field("semet_yemek_id") food_id: Int
+        @Field("sepet_yemek_id") food_id: Int
     ): CRUDAnswer
 
 }

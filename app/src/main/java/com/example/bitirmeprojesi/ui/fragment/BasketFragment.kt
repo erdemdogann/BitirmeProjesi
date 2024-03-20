@@ -31,7 +31,7 @@ class BasketFragment : Fragment() {
         binding.basketList.layoutManager = LinearLayoutManager(requireContext())
 
         viewModel.foodList.observe(viewLifecycleOwner) {
-            adapter?.basketFood = it
+            adapter?.basketFood = it.toMutableList()
         }
 
         return binding.root

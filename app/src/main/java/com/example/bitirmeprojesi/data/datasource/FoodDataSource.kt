@@ -1,5 +1,6 @@
 package com.example.bitirmeprojesi.data.datasource
 
+import com.example.bitirmeprojesi.data.entity.CRUDAnswer
 import com.example.bitirmeprojesi.data.entity.Order
 import com.example.bitirmeprojesi.data.entity.Yemekler
 import com.example.bitirmeprojesi.retrofit.FoodDao
@@ -26,6 +27,8 @@ class FoodDataSource(var fdao: FoodDao) {
             return@withContext fdao.basket(user_name).sepet_yemekler
         }
 
-    suspend fun delete(user_name: String, food_id: Int) = fdao.delete(user_name, food_id)
+    suspend fun delete(user_name: String, food_id: Int):CRUDAnswer {
+        return fdao.delete(user_name, food_id)
+    }
 
 }
