@@ -1,10 +1,13 @@
 
-‘kotlin:S117"NRename this parameter to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$(ãıŞz8ÄÖ¸å1J$a06e0a95-28ff-4c52-8677-7287cb829a86
-’kotlin:S117"NRename this parameter to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$(†ğ Û8ÅÖ¸å1J$8b267152-6361-4e30-b29a-b0904bb11617
-‘kotlin:S117"NRename this parameter to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$(»ºÚb8ÅÖ¸å1J$02dfb125-738a-41e3-b5f5-e31028805ee3
-—kotlin:S117"NRename this parameter to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$(ú×È‚ùÿÿÿÿ8ÅÖ¸å1J$ce6fed56-6fd6-4b48-8e19-f26edf1a6cec
-’kotlin:S117"NRename this parameter to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$(áŸÒá8å´¸å1J$5d666b50-dc9c-4b8f-8bc7-8d4d82298fe9
-akotlin:S6310
-"Avoid hardcoded dispatchers.(Ô¥‚ü8Ş—âÏã1J$310753b4-eaa0-4b9f-bcd1-b46b3172ac39
-pkotlin:S6311
-"QRemove this dispatcher. It is pointless when used with only suspending functions.(Ô¥‚ü8ÑÒ·¸å1
+‘kotlin:S117"NRename this parameter to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$(ãıŞz8˜ÿûÜå1J$3ee0ad33-9325-4786-bdda-e73fc2e96456
+’kotlin:S117"NRename this parameter to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$(†ğ Û8˜ÿûÜå1J$02cda3a3-f8f5-40fe-9c04-96c88bdf3f5c
+‘kotlin:S117"NRename this parameter to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$(»ºÚb8˜ÿûÜå1J$4c9fdc62-6437-45b7-8c2e-e52e5256565c
+—kotlin:S117"NRename this parameter to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$(ú×È‚ùÿÿÿÿ8˜ÿûÜå1J$162cbacb-8b13-4ea9-9a82-165492fc65c3
+’kotlin:S117"NRename this parameter to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$(áŸÒá8˜ÿûÜå1J$4e0acb43-fa32-4bcc-9156-d9f36d468685
+—kotlin:S117"NRename this parameter to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$(šø°ëÿÿÿÿÿ8™ÿûÜå1J$e1c06ea7-7191-43cd-914f-914a15a8065e
+—kotlin:S117"NRename this parameter to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$(¥ñ³ªúÿÿÿÿ8•›ıÜå1J$2ab17c4e-4f0a-41de-b984-634b6a244e6a
+—kotlin:S117"NRename this parameter to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$(¥ñ³ªúÿÿÿÿ8ƒŞıÜå1J$d828eadc-291f-48dd-a14a-8d583784c73f
+akotlin:S6310"Avoid hardcoded dispatchers.(Ô¥‚ü8šÿûÜå1J$2cf3d440-0bf2-4636-860e-83bbbefae0c3
+akotlin:S6310"Avoid hardcoded dispatchers.(Ô¥‚ü8šÿûÜå1J$381e87a4-da6a-49ec-8adf-25d0e378c8cb
+pkotlin:S6311"QRemove this dispatcher. It is pointless when used with only suspending functions.(Ô¥‚ü8³€–âå1
+pkotlin:S6311"QRemove this dispatcher. It is pointless when used with only suspending functions.(Ô¥‚ü8´€–âå1

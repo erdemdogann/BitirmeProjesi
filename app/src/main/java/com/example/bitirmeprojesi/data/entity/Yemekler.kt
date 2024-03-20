@@ -7,6 +7,4 @@ data class Yemekler(
     var yemek_fiyat: String,
     var yemek_id: String,
     var yemek_resim_adi: String
-) : Serializable {
-
-}
+) : Serializable

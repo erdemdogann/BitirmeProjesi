@@ -13,6 +13,9 @@
         <action
             android:id="@+id/foodDetail"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/foodBasket"
+            app:destination="@id/basketFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -23,4 +26,9 @@
             android:name="foods"
             app:argType="com.example.bitirmeprojesi.data.entity.Yemekler" />
     </fragment>
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="com.example.bitirmeprojesi.ui.fragment.BasketFragment"
+        android:label="fragment_basket"
+        tools:layout="@layout/fragment_basket" />
 </navigation>

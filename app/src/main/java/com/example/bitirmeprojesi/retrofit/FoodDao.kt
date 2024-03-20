@@ -1,5 +1,6 @@
 package com.example.bitirmeprojesi.retrofit
 
+import com.example.bitirmeprojesi.data.entity.BasketFood
 import com.example.bitirmeprojesi.data.entity.CRUDAnswer
 import com.example.bitirmeprojesi.data.entity.Foods
 import retrofit2.http.Field
@@ -8,7 +9,7 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface FoodDao {
-    //base url = http://kasimadalan.pe.hu/
+    //yemekler/resimler/
 
     @GET("yemekler/tumYemekleriGetir.php")
     suspend fun allFood(): Foods
@@ -21,6 +22,17 @@ interface FoodDao {
         @Field("yemek_fiyat") food_price: Int,
         @Field("yemek_siparis_adet") food_order: Int,
         @Field("kullanici_adi") user_name: String
-    ):CRUDAnswer
+    ): CRUDAnswer
+
+    @POST("yemekler/sepettekiYemekleriGetir.php")
+    @FormUrlEncoded
+    suspend fun basket(@Field("kullanici_adi") user_name: String): BasketFood
+
+    @POST("yemekler/sepettenYemekSil.php")
+    @FormUrlEncoded
+    suspend fun delete(
+        @Field("kullanici_adi") user_name: String,
+        @Field("semet_yemek_id") food_id: Int
+    ): CRUDAnswer
 
 }

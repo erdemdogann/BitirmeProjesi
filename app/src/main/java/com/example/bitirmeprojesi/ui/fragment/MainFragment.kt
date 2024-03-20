@@ -35,6 +35,9 @@ class MainFragment : Fragment() {
         viewModel.foodList.observe(viewLifecycleOwner) {
           adapter?.allFood = it
         }
+        binding.button2.setOnClickListener {
+            findNavController().navigate(MainFragmentDirections.foodBasket())
+        }
 
         binding.foodList.layoutManager = LinearLayoutManager(requireContext())
         return binding.root

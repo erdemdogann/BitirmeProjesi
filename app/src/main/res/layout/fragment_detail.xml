@@ -53,13 +53,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:layout_marginBottom="216dp"
+        android:text="0"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toStartOf="@+id/add"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/decrease"
-        app:layout_constraintTop_toBottomOf="@+id/foodPrice2"
-        android:text="0" />
+        app:layout_constraintTop_toBottomOf="@+id/foodPrice2" />
 
     <Button
         android:id="@+id/decrease"
@@ -86,11 +86,11 @@
         app:layout_constraintTop_toTopOf="@+id/foodNumber" />
 
     <Button
-        android:id="@+id/order"
+        android:id="@+id/sendBasket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="35dp"
-        android:text="Order"
+        android:text="Send Basket"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

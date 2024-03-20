@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.example.bitirmeprojesi.R
 import com.example.bitirmeprojesi.databinding.FragmentDetailBinding
@@ -33,7 +34,7 @@ class DetailFragment : Fragment() {
         binding.add.setOnClickListener { add() }
         binding.decrease.setOnClickListener { decrease() }
 
-        binding.order.setOnClickListener {
+        binding.sendBasket.setOnClickListener {
                 val food_name = binding.foodName1.text.toString()
                 val food_image = getFood.yemek_resim_adi
                 val food_price = getFood.yemek_fiyat.toInt()
@@ -56,5 +57,10 @@ class DetailFragment : Fragment() {
             binding.foodNumber.text = number.toString()
         }
 
+    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val tempViewModel:DetailViewModel by viewModels()
+        viewModel = tempViewModel
     }
 }
