@@ -47,6 +47,11 @@ class BasketFragment : Fragment() {
                     }
                 })
         }
+        var total = 0
+        if (adapter != null) {
+            total = total + adapter!!.price
+            binding.totalPrice.text = "$total"
+        }
         return binding.root
     }
 

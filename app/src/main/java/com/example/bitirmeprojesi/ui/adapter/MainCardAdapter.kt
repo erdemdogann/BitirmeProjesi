@@ -22,7 +22,7 @@ class MainCardAdapter :
         RecyclerView.ViewHolder(itemBinding.root) {
         fun bind(allFood: Yemekler) {
             itemBinding.foodName.text = allFood.yemek_adi
-            itemBinding.foodPrice.text = allFood.yemek_fiyat
+            itemBinding.foodPrice.text = "${allFood.yemek_fiyat} ₺"
 
             itemBinding.imageView.loadImage(allFood.yemek_resim_adi)
         }

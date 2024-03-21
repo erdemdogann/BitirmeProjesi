@@ -18,6 +18,7 @@ class BasketCardAdapter :
             field = value
             notifyDataSetChanged()
         }
+    var price = 0
 
     inner class Holder(val itemBinding: BasketCardBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
@@ -26,9 +27,9 @@ class BasketCardAdapter :
             itemBinding.apply {
                 orderFoodName.text = orders.yemek_adi
                 orderFoodNumber.text = orders.yemek_siparis_adet
-                orderFoodPrice.text = orders.yemek_fiyat
-                val price = orders.yemek_fiyat.toInt() * orders.yemek_siparis_adet.toInt()
-                textView4.text = "Total: $price"
+                orderFoodPrice.text = "${orders.yemek_fiyat} ₺"
+                price = orders.yemek_fiyat.toInt() * orders.yemek_siparis_adet.toInt()
+                textView4.text = "Total: $price ₺"
                 delete.setOnClickListener {
                     onClick.invoke(orders.sepet_yemek_id.toInt(),orders.kullanici_adi)
                 }

@@ -32,7 +32,7 @@ class DetailFragment : Fragment() {
 
         binding.apply {
             foodName1.text = getFood.yemek_adi
-            foodPrice2.text = getFood.yemek_fiyat
+            foodPrice2.text = "${getFood.yemek_fiyat} ₺"
 
             add.setOnClickListener { add() }
             decrease.setOnClickListener { decrease() }
