@@ -94,7 +94,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="35dp"
-        android:text="Send Basket"
+        android:text="@string/add"
         android:textSize="24sp"
         android:textColor="@color/buttomText"
         android:backgroundTint="@color/bottom"

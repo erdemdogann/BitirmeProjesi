@@ -10,4 +10,5 @@
         android:id="@+id/basketFragment"
         android:icon="@drawable/basket"
         android:title="Shop" />
+
 </menu>

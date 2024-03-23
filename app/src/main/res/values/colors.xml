@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="bottom">#F7CA11</color>
     <color name="buttomText">#14304A</color>
+    <color name="favorite">#FF0E0E</color>
+    <color name="notfavorite">#EFEEEE</color>
 </resources>

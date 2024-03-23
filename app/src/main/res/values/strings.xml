@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">BitirmeProjesi</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="main">Main Menu</string>
+    <string name="shop">Cart</string>
+    <string name="menu">Menu</string>
+    <string name="add">Add to cart</string>
+    <string name="order">Confirm basket</string>
+
 </resources>

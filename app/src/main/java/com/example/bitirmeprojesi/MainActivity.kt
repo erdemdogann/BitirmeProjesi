@@ -27,13 +27,19 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
 
         NavigationUI.setupWithNavController(binding.bottomNavigation,navHostFragment.navController)
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.mainFragment ->{
+                    navHostFragment.navController.navigate(R.id.action_global_mainFragment)
+                }
+                R.id.basketFragment->{
+                    navHostFragment.navController.navigate(R.id.action_global_basketFragment)
+                }
+            }
+            true
+        }
     }
 }
