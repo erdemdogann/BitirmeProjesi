@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView.AdapterDataObserver
 import com.example.bitirmeprojesi.R
 import com.example.bitirmeprojesi.databinding.FragmentBasketBinding
 import com.example.bitirmeprojesi.ui.adapter.BasketCardAdapter
@@ -32,8 +33,10 @@ class BasketFragment : Fragment() {
 
         viewModel.foodList.observe(viewLifecycleOwner) {
             adapter?.basketFood = it.toMutableList()
+            binding.totalPrice.text =
+                adapter?.basketFood?.sumOf { it.yemek_fiyat.toInt() }.toString()
         }
-        adapter?.onClick = {id,userName->
+        adapter?.onClick = { id, userName ->
             viewModel.delete(
                 userName,
                 id,
@@ -41,16 +44,13 @@ class BasketFragment : Fragment() {
                     var deletedItem = adapter?.basketFood?.indexOfFirst {
                         it.sepet_yemek_id.toInt() == id
                     }
-                    if (deletedItem!=null) {
+                    if (deletedItem != null) {
                         adapter?.basketFood?.removeAt(deletedItem)
                         adapter?.notifyItemRemoved(deletedItem)
+                        binding.totalPrice.text =
+                            adapter?.basketFood?.sumOf { it.yemek_fiyat.toInt() }.toString()
                     }
                 })
-        }
-        var total = 0
-        if (adapter != null) {
-            total = total + adapter!!.price
-            binding.totalPrice.text = "$total"
         }
         return binding.root
     }
@@ -60,6 +60,7 @@ class BasketFragment : Fragment() {
         val tempViewModel: BasketViewModel by viewModels()
         viewModel = tempViewModel
     }
+
     override fun onResume() {
         super.onResume()
         viewModel.basket("erdem")
