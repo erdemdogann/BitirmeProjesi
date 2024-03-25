@@ -27,7 +27,6 @@ class BasketFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         binding = FragmentBasketBinding.inflate(inflater, container, false)
 
         adapter = BasketCardAdapter()

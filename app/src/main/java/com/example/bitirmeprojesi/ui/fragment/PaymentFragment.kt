@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.bitirmeprojesi.R
 import com.example.bitirmeprojesi.data.entity.Card
@@ -36,33 +37,11 @@ class PaymentFragment : Fragment() {
         binding = FragmentPaymentBinding.inflate(inflater, container, false)
 
 
-        binding.save.setOnClickListener {
-            val cardNumber = binding.cardNumber.text
-            val cardDate = binding.cardDate.text
-            val cardCvc = binding.cardCvc.text
-            val cardId = binding.cardName.text
-            if (cardNumber.isNullOrEmpty().not() && cardCvc.isNullOrEmpty()
-                    .not() && cardDate.isNullOrEmpty().not() && cardId.isNullOrEmpty().not()
-            ) {
-                val card = Card(
-                    cardId.toString(),
-                    cardNumber.toString(),
-                    cardDate.toString(),
-                    cardCvc.toString()
-                )
-                db.collection("Card").document(cardId.toString())
-                    .set(card)
-                    .addOnSuccessListener { documentReference ->
-                        Log.d(TAG, "DocumentSnapshot added with ID: ")
-                        adapter?.cardList?.add(card)
-                        adapter?.notifyDataSetChanged()
-                    }
-                    .addOnFailureListener { e ->
-                        Log.w(TAG, "Error adding document", e)
-                    }
-
-            }
+        binding.addCard.setOnClickListener {
+            findNavController().navigate(PaymentFragmentDirections.saving())
         }
+
+
         db.collection("Card").get().addOnSuccessListener { result ->
             val cards = mutableListOf<Card>()
             for (i in result) {

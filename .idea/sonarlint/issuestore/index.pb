@@ -2625,3 +2625,5 @@ y
 Iapp/src/main/java/com/example/bitirmeprojesi/ui/adapter/PayCardAdapter.kt,a\a\aaafe90b529e7786ae8df232416fea0d703e26c6
 I
 gradle/libs.versions.toml,d\7\d7595319a0658be6f1ed500ad590d42e4b28bc4f
+{
+Kapp/src/main/java/com/example/bitirmeprojesi/ui/fragment/AddCardFragment.kt,8\3\83289f5fdff7a7b3300785c239f0a6f57a060cca

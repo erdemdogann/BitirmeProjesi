@@ -8,4 +8,9 @@
     <string name="order">Sepeti onayla</string>
     <string name="filter">Fiyat</string>
     <string name="total">Toplam</string>
+    <string name="addcard">Kartı Kaydet</string>
+    <string name="cardnumber">Kart Numarası</string>
+    <string name="cardname">Kart İsmi</string>
+    <string name="cash">Kapıda Ödeme</string>
+    <string name="card">Kredi Kartı Ekle</string>
 </resources>

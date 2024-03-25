@@ -7,4 +7,9 @@
     <string name="order">Confirm basket</string>
     <string name="filter">Price</string>
     <string name="total">Total</string>
+    <string name="addcard">Save Card</string>
+    <string name="cardnumber">Card Number</string>
+    <string name="cardname">Card Name</string>
+    <string name="cash">Cash on Delivery</string>
+    <string name="card">Add Credit Card</string>
 </resources>
