@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BitirmeProjesi</string>
+    <string name="main">Ana Menü</string>
+    <string name="shop">Sepetim</string>
+    <string name="menu">Menü</string>
+    <string name="add">Sepete ekle</string>
+    <string name="order">Sepeti onayla</string>
+    <string name="filter">Fiyat</string>
+    <string name="total">Toplam</string>
+</resources>
