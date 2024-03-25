@@ -13,4 +13,7 @@
     <string name="cardname">Kart İsmi</string>
     <string name="cash">Kapıda Ödeme</string>
     <string name="card">Kredi Kartı Ekle</string>
+    <string name="payment">Ödeme Yöntemi Seçiniz</string>
+    <string name="pay">Sepeti Öde</string>
+    <string name="addcredit">Kart Ekle</string>
 </resources>

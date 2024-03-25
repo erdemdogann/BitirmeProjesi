@@ -12,4 +12,7 @@
     <string name="cardname">Card Name</string>
     <string name="cash">Cash on Delivery</string>
     <string name="card">Add Credit Card</string>
+    <string name="payment">Please choose payment method</string>
+    <string name="pay">Pay Cart</string>
+    <string name="addcredit">Add Card</string>
 </resources>
