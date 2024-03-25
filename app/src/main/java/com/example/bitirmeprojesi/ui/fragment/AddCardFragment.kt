@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.bitirmeprojesi.R
 import com.example.bitirmeprojesi.data.entity.Card
 import com.example.bitirmeprojesi.databinding.FragmentAddCardBinding
@@ -16,7 +17,7 @@ import com.google.firebase.firestore.firestore
 
 class AddCardFragment : Fragment() {
 
-    private lateinit var binding : FragmentAddCardBinding
+    private lateinit var binding: FragmentAddCardBinding
     private var adapter: PayCardAdapter? = null
 
     var db = Firebase.firestore
@@ -26,7 +27,7 @@ class AddCardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentAddCardBinding.inflate(inflater,container,false)
+        binding = FragmentAddCardBinding.inflate(inflater, container, false)
 
         binding.save.setOnClickListener {
             val cardNumber = binding.cardNumber.text
@@ -52,8 +53,9 @@ class AddCardFragment : Fragment() {
                     .addOnFailureListener { e ->
                         Log.w(ContentValues.TAG, "Error adding document", e)
                     }
-
+                findNavController().navigate(AddCardFragmentDirections.backPayment())
             }
+
         }
 
         return binding.root

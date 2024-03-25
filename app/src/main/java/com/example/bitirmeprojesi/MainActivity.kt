@@ -13,7 +13,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.bitirmeprojesi.data.entity.Order
 import com.example.bitirmeprojesi.databinding.ActivityMainBinding
+import com.example.bitirmeprojesi.ui.adapter.BasketCardAdapter
 import com.example.bitirmeprojesi.ui.fragment.BasketFragment
 import com.example.bitirmeprojesi.ui.fragment.MainFragment
 import com.google.android.material.bottomnavigation.BottomNavigationItemView

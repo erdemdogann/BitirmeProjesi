@@ -48,5 +48,9 @@
         android:id="@+id/addCardFragment"
         android:name="com.example.bitirmeprojesi.ui.fragment.AddCardFragment"
         android:label="fragment_add_card"
-        tools:layout="@layout/fragment_add_card" />
+        tools:layout="@layout/fragment_add_card" >
+        <action
+            android:id="@+id/backPayment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
 </navigation>
