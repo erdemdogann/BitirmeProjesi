@@ -2615,3 +2615,13 @@ Q.idea/sonarlint/securityhotspotstore/4/6/4681434058539a017acefbf694bc8331fa8d87
 Q.idea/sonarlint/securityhotspotstore/4/f/4f242900b94cab3bc5b62af4adcd7283cd0d9b60,4\9\495937287a50f801221e96f9c394fa031d74b9f3
 Å
 Q.idea/sonarlint/securityhotspotstore/4/f/4fd228426a1394df03b7b2bc87e55c098b0f1d14,5\9\59cee8b45f84385f530bc1cfaab0a499836c69f8
+H
+app/google-services.json,f\d\fd8d34b142d02ec743a8efefefd2c097961666e9
+{
+Kapp/src/main/java/com/example/bitirmeprojesi/ui/fragment/PaymentFragment.kt,5\8\58e23cd1fd35d618ecf3559adc812f76c97577ac
+p
+@app/src/main/java/com/example/bitirmeprojesi/data/entity/Card.kt,9\f\9fd88c56e651be68760b5c69a17d42579ae2bac9
+y
+Iapp/src/main/java/com/example/bitirmeprojesi/ui/adapter/PayCardAdapter.kt,a\a\aaafe90b529e7786ae8df232416fea0d703e26c6
+I
+gradle/libs.versions.toml,d\7\d7595319a0658be6f1ed500ad590d42e4b28bc4f

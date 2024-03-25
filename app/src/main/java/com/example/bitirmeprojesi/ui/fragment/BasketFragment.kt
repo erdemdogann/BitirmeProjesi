@@ -1,11 +1,13 @@
 package com.example.bitirmeprojesi.ui.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.AdapterDataObserver
 import com.example.bitirmeprojesi.R
@@ -20,6 +22,7 @@ class BasketFragment : Fragment() {
     private lateinit var binding: FragmentBasketBinding
     private lateinit var viewModel: BasketViewModel
     private var adapter: BasketCardAdapter? = null
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,7 +37,10 @@ class BasketFragment : Fragment() {
         viewModel.foodList.observe(viewLifecycleOwner) {
             adapter?.basketFood = it.toMutableList()
             binding.totalPrice.text =
-                adapter?.basketFood?.sumOf { it.yemek_fiyat.toInt() }.toString()
+                "${requireContext().getString(R.string.total)} : ${
+                    adapter?.basketFood?.sumOf { it.yemek_fiyat.toInt() * it.yemek_siparis_adet.toInt() }
+                        .toString()
+                } ₺"
         }
         adapter?.onClick = { id, userName ->
             viewModel.delete(
@@ -48,10 +54,17 @@ class BasketFragment : Fragment() {
                         adapter?.basketFood?.removeAt(deletedItem)
                         adapter?.notifyItemRemoved(deletedItem)
                         binding.totalPrice.text =
-                            adapter?.basketFood?.sumOf { it.yemek_fiyat.toInt() }.toString()
+                            "${requireContext().getString(R.string.total)} : ${
+                                adapter?.basketFood?.sumOf { it.yemek_fiyat.toInt() * it.yemek_siparis_adet.toInt() }
+                                    .toString()
+                            } ₺"
                     }
                 })
         }
+        binding.order.setOnClickListener {
+            findNavController().navigate(BasketFragmentDirections.payment())
+        }
+
         return binding.root
     }
 
@@ -59,11 +72,6 @@ class BasketFragment : Fragment() {
         super.onCreate(savedInstanceState)
         val tempViewModel: BasketViewModel by viewModels()
         viewModel = tempViewModel
-    }
-
-    override fun onResume() {
-        super.onResume()
-        viewModel.basket("erdem")
     }
 
 }

@@ -48,8 +48,11 @@ class DetailFragment : Fragment() {
                 val food_price = getFood.yemek_fiyat.toInt()
                 val food_order = number
                 val user_name = "erdem"
-                viewModel.order(food_name, food_image, food_price, food_order, user_name)
+                if (food_order != 0) {
+                    viewModel.order(food_name, food_image, food_price, food_order, user_name)
+                }
             }
+
         }
 
 
