@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.graphics.drawable.toDrawable
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -50,7 +51,15 @@ class DetailFragment : Fragment() {
                 val user_name = "erdem"
                 if (food_order != 0) {
                     viewModel.order(food_name, food_image, food_price, food_order, user_name)
+
+                    Toast.makeText(
+                        requireContext(),
+                        "$food_order $food_name ${requireContext().getString(R.string.basket)}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
                 }
+
             }
 
         }

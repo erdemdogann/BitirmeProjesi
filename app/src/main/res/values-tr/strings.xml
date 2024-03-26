@@ -16,4 +16,5 @@
     <string name="payment">Ödeme Yöntemi Seçiniz</string>
     <string name="pay">Sepeti Öde</string>
     <string name="addcredit">Kart Ekle</string>
+    <string name="basket">Sepete Eklendi</string>
 </resources>

@@ -15,4 +15,5 @@
     <string name="payment">Please choose payment method</string>
     <string name="pay">Pay Cart</string>
     <string name="addcredit">Add Card</string>
+    <string name="basket">Added To Cart</string>
 </resources>
