@@ -10,6 +10,8 @@ class PayCardAdapter(val cardList: MutableList<Card>) : RecyclerView.Adapter<Pay
 
     var onClick: (String) ->Unit = {cardid ->}
 
+    var finishClick: (Card) ->Unit = { }
+
     inner class Holder(val itemBinding: PayCardBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
         fun bind(cards: Card) {

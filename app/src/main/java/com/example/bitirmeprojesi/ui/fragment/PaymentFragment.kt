@@ -63,6 +63,17 @@ class PaymentFragment : Fragment() {
                     .addOnFailureListener { e -> Log.w(TAG, "Error deleting document", e) }
             }
         }
+        binding.cash.setOnClickListener {
+            Toast.makeText(
+                requireContext(),
+                "Kapıda ödeme ile Siparişiniz alınmıştır",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+        binding.finish.setOnClickListener {
+            Toast.makeText(requireContext(), "Kart ile Siparişiniz alınmıştır", Toast.LENGTH_SHORT).show()
+        }
 
         return binding.root
     }
